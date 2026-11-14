@@ -1,3 +1,4 @@
+
 const teclado = require("prompt-sync")();
 
 let nota1 = Number(teclado("Digite a primeira nota: "));
@@ -10,6 +11,10 @@ console.log("Média do aluno: " + media.toFixed(2));
 
 if (media >= 7) {
     console.log("Aluno aprovado!");
+} else if (media >= 5) {
+    console.log("Aluno reprovado!");
+    console.log("Pode fazer recuperação!");
 } else {
     console.log("Aluno reprovado!");
+    console.log("Não pode fazer recuperação!");
 }
