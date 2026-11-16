@@ -17,3 +17,11 @@ for (let i = 0; i < linhas; i++) {
 
 for (let i = 0; i < colunas; i++) {
     transposta[i] = [];
+
+    for (let j = 0; j < linhas; j++) {
+        transposta[i][j] = mat[j][i];
+    }
+}
+
+console.log("Matriz original:", mat);
+console.log("Matriz transposta:", transposta);
