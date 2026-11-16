@@ -1,0 +1,19 @@
+
+const teclado = require("prompt-sync")();
+
+let mat = [];
+let transposta = [];
+
+let linhas = Number(prompt("Digite a quantidade de linhas:"));
+let colunas = Number(prompt("Digite a quantidade de colunas:"));
+
+for (let i = 0; i < linhas; i++) {
+    mat[i] = [];
+
+    for (let j = 0; j < colunas; j++) {
+        mat[i][j] = Number(prompt("Digite um número:"));
+    }
+}
+
+for (let i = 0; i < colunas; i++) {
+    transposta[i] = [];
