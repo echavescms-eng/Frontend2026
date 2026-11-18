@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #caixa {
+            width: 100px;
+            height: 100px;
+            background: green;
+            margin: 50px auto;
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aumentar, diminuir e girar o elemento</h1>
+
+    <div id="caixa"></div>
+    <button onclick="aumentar()">Aumentar</button>
+    <button onclick="diminuir()">Diminuir</button>
+    <button onclick="girar()">Rotacionar</button>
+
+    <script>
+        let tamanho = 100;
+        let angulo = 0;
+
+        function aumentar() {
+            tamanho = tamanho + 20;
+            document.getElementById("caixa").style.transform = `scale(${tamanho / 100})`;
+        }
+
+        function diminuir() {
+            tamanho = tamanho - 20;
+            if (tamanho < 40)
+                tamanho = 40;
+            document.getElementById("caixa").style.transform = `scale(${tamanho / 100})`;
+        }
+
+        function girar() {
+            angulo = angulo + 45;
+            document.getElementById("caixa").style.transform = `rotate(${angulo}deg)`;
+        }
+    </script>
+</body>
+</html>
