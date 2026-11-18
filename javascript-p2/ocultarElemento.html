@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding: 30px;
+
+        }
+
+        button{
+            padding: 12px;
+            cursor: pointer;
+        }
+
+        #mensagem{
+            background-color: lightblue;
+            padding: 30px;
+            margin: 30px;
+            border-radius: 10px;
+        }
+    </style>
+    
+<body>
+    
+    <h1>Animações JavaScript</h1>
+
+    <h3>Como mostrar ou ocultar elementos na tela.</h3>
+
+    <button onclick="mostrar()">Mostrar elemento</button>
+
+    <button onclick="esconder()">Ocultar elemento</button>
+
+    <div id="mensagem">Olá, esta mensagem pode aparecer ou desaparecer</div>
+
+    <script>
+        function mostrar(){
+            let elemento = document.getElementById("mensagem");
+            elemento.style.display = "block";
+        }
+        function esconder(){
+            let elemento = document.getElementById("mensagem");
+            elemento.style.display = "none";
+        }
+    </script>
+</body>
+</html>
